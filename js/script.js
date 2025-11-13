@@ -1,9 +1,8 @@
-// Menu mobile
+// Seu código (mantido)
 document.getElementById('menuToggle').addEventListener('click', () => {
   document.getElementById('navLinks').classList.toggle('active');
 });
 
-// Animação ao rolar
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -12,19 +11,43 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.1 });
 
-document.querySelectorAll('.benefit-card, .product-card').forEach(card => {
+document.querySelectorAll('.benefit-card, .product-card-wrapper').forEach(card => {
   observer.observe(card);
 });
-// Animação de detalhes do produto
-document.querySelectorAll('.info-btn').forEach(button => {
-  button.addEventListener("click", function() {
-    let description = this.parentElement.querySelector(".description");
-    if (description.style.display === "block") {
-      description.style.display = "none";
-      this.textContent = "Details";
-    } else {
-      description.style.display = "block";
-      this.textContent = "Hide details";
+
+// NOVO: Flip com clique
+document.querySelectorAll('[data-flip]').forEach(wrapper => {
+  const detailsBtn = wrapper.querySelector('.details-btn');
+  const backBtn = wrapper.querySelector('.back-btn');
+
+  detailsBtn?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    wrapper.classList.add('flipped');
+  });
+
+  backBtn?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    wrapper.classList.remove('flipped');
+  });
+
+  // Fecha ao clicar fora (opcional)
+  wrapper.addEventListener('click', (e) => {
+    if (e.target === wrapper) {
+      wrapper.classList.remove('flipped');
     }
   });
+});
+
+// === VEJA MAIS - EXPANDIR CARDS ===
+const loadMoreBtn = document.getElementById('loadMoreBtn');
+const hiddenCards = document.querySelectorAll('.hidden-card');
+
+loadMoreBtn.addEventListener('click', () => {
+  hiddenCards.forEach((card, index) => {
+    setTimeout(() => {
+      card.classList.add('show');
+    }, index * 100); // Animação escalonada
+  });
+
+  loadMoreBtn.classList.add('hidden');
 });

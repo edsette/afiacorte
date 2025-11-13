@@ -56,142 +56,443 @@
   </section>
 
   <!-- Serviços -->
-  <section id="servicos">
-    <h2>Serviços e Produtos</h2>
-    <div class="products-grid">
-      <div class="product-card">
+<section id="servicos">
+  <h2>Serviços e Produtos</h2>
+  <div class="products-container" id="productsContainer">
+
+    <!-- === 6 CARDS VISÍVEIS === -->
+    <!-- CARD 1: Afiação de Facas -->
+    <div class="product-card-wrapper" data-flip>
+      <div class="product-card front">
         <div class="product-img" style="background-image: url('../assets/img/afiafacasjpg.webp');"></div>
         <div class="product-info">
           <h3>Afiação de Facas Industriais</h3>
-          <p class="description">Corte e Afiação de facas industriais.</p>
-          <button class="info-btn" style="font-size: 0.9rem; padding: 0.6rem 1.2rem;">Detalhes</button>
-          <a href="#contato" class="btn" style="font-size: 0.9rem; padding: 0.6rem 1.2rem;">Solicitar</a>
+          <p class="description">Serviço essencial para manter a eficiência de corte.</p>
+          <p class="details-btn">Detalhes</p>
+          <a href="#contato" class="btn">Solicitar</a>
         </div>
       </div>
-
-      <div class="product-card">
-        <div class="product-img" style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 300%22><rect fill=%22%23e2e8f0%22 width=%22400%22 height=%22300%22/><text x=%2250%%22 y=%2250%%22 font-family=%22Arial%22 font-size=%2224%22 fill=%22%2394a3b8%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22>Grelha e Cortinas</text></svg>');"></div>
-        <div class="product-info">
-          <h3>Grelha e Cortinas</h3>
-          <p>Segurança e eficiência</p>
-          <div class="price">Saiba Mais</div>
-          <a href="#contato" class="btn" style="font-size: 0.9rem; padding: 0.6rem 1.2rem;">Solicitar</a>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <div class="product-img" style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 300%22><rect fill=%22%23e2e8f0%22 width=%22400%22 height=%22300%22/><text x=%2250%%22 y=%2250%%22 font-family=%22Arial%22 font-size=%2224%22 fill=%22%2394a3b8%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22>Painel Elétrico</text></svg>');"></div>
-        <div class="product-info">
-          <h3>Painel Elétrico e Sensores</h3>
-          <p>Automação e segurança</p>
-          <div class="price">Saiba Mais</div>
-          <a href="#contato" class="btn" style="font-size: 0.9rem; padding: 0.6rem 1.2rem;">Solicitar</a>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <div class="product-img" style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 300%22><rect fill=%22%23e2e8f0%22 width=%22400%22 height=%22300%22/><text x=%2250%%22 y=%2250%%22 font-family=%22Arial%22 font-size=%2224%22 fill=%22%2394a3b8%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22>Chave e Cabine</text></svg>');"></div>
-        <div class="product-info">
-          <h3>Chave de Segurança e Cabine Acústica</h3>
-          <p>Proteção e silêncio</p>
-          <div class="price">Saiba Mais</div>
-          <a href="#contato" class="btn" style="font-size: 0.9rem; padding: 0.6rem 1.2rem;">Solicitar</a>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <div class="product-img" style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 300%22><rect fill=%22%23e2e8f0%22 width=%22400%22 height=%22300%22/><text x=%2250%%22 y=%2250%%22 font-family=%22Arial%22 font-size=%2224%22 fill=%22%2394a3b8%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22>Polias e Correias</text></svg>');"></div>
-        <div class="product-info">
-          <h3>Polias, Correias e Rolamentos</h3>
-          <p>Peças de reposição</p>
-          <div class="price">Saiba Mais</div>
-          <a href="#contato" class="btn" style="font-size: 0.9rem; padding: 0.6rem 1.2rem;">Solicitar</a>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <div class="product-img" style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 300%22><rect fill=%22%23e2e8f0%22 width=%22400%22 height=%22300%22/><text x=%2250%%22 y=%2250%%22 font-family=%22Arial%22 font-size=%2224%22 fill=%22%2394a3b8%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22>Separador de Pó</text></svg>');"></div>
-        <div class="product-info">
-          <h3>Separador de Pó e Filtros</h3>
-          <p>Limpeza e eficiência</p>
-          <div class="price">Saiba Mais</div>
-          <a href="#contato" class="btn" style="font-size: 0.9rem; padding: 0.6rem 1.2rem;">Solicitar</a>
+      <div class="product-card back">
+        <div class="product-info back-info">
+          <h3>Afiação de Facas Industriais</h3>
+          <p class="description-full">
+            Realizado com <strong>equipamentos de precisão</strong>, garante <strong>geometria uniforme</strong>, <strong>ângulos de corte adequados</strong> e <strong>acabamento superficial de alta qualidade</strong>. Compatível com facas de até <strong>600 mm</strong>, em <strong>aço ferramenta</strong> ou <strong>HSS</strong>.
+          </p>
+          <p class="back-btn">Voltar</p>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- Sobre -->
-  <section id="sobre">
-    <h2>Quem Somos</h2>
-    <div class="about-content">
-      <div>
-        <h3>Especialistas em Moinhos e Trituradores</h3>
-        <p>A <strong>AfiaCorte</strong> é referência em afiação, reforma e manutenção de equipamentos industriais.</p>
-        <h4>Serviços e Produtos:</h4>
-        <ul style="margin: 1rem 0; padding-left: 1.5rem;">
-          <li>Afiação de facas industriais</li>
-          <li>Grelha</li>
-          <li>Cortinas</li>
-          <li>Painel Elétrico</li>
-          <li>Sensores</li>
-          <li>Chave de segurança eletromagnética</li>
-          <li>Cabine de isolamento acústico</li>
-          <li>Polias</li>
-          <li>Correias</li>
-          <li>Rolamentos</li>
-          <li>Separador de pó</li>
-          <li>Filtros</li>
-          <li>Reformas em geral</li>
-          <li>Assistência técnica especializada</li>
-        </ul>
-        <h4>Marcas Atendidas:</h4>
-        <ul style="margin: 1rem 0; padding-left: 1.5rem;">
-          <li>Mecano</li>
-          <li>Kief</li>
-          <li>Tria</li>
-          <li>Seibt</li>
-          <li>Moinhos Rome</li>
-          <li>Rapid</li>
-        </ul>
+    <!-- CARD 2: Grelhas -->
+    <div class="product-card-wrapper" data-flip>
+      <div class="product-card front">
+        <div class="product-img" style="background-image: url('../assets/img/grelhas.webp');"></div>
+        <div class="product-info">
+          <h3>Grelhas</h3>
+          <p class="description">Componentes usados para controle do tamanho do material processado.</p>
+          <p class="details-btn">Detalhes</p>
+          <a href="#contato" class="btn">Solicitar</a>
+        </div>
       </div>
+      <div class="product-card back">
+        <div class="product-info back-info">
+          <h3>Grelhas</h3>
+          <p class="description-full">
+            Fabricadas em <strong>aço carbono</strong> ou <strong>inox</strong>, com <strong>tratamento térmico opcional</strong>. Aplicadas em <strong>moinhos</strong> e <strong>trituradores</strong>.
+          </p>
+          <p class="back-btn">Voltar</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 3: Cortinas -->
+    <div class="product-card-wrapper" data-flip>
+      <div class="product-card front">
+        <div class="product-img" style="background-image: url('../assets/img/cortinas.webp');"></div>
+        <div class="product-info">
+          <h3>Cortinas</h3>
+          <p class="description">Utilizadas para segurança e redução de ruído.</p>
+          <p class="details-btn">Detalhes</p>
+          <a href="#contato" class="btn">Solicitar</a>
+        </div>
+      </div>
+      <div class="product-card back">
+        <div class="product-info back-info">
+          <h3>Cortinas</h3>
+          <p class="description-full">
+            Feitas em <strong>PVC</strong> ou <strong>material metálico flexível</strong>, evitam <strong>dispersão de partículas</strong> e reduzem o <strong>ruído operacional</strong>.
+          </p>
+          <p class="back-btn">Voltar</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 4: Painel Elétrico -->
+    <div class="product-card-wrapper" data-flip>
+      <div class="product-card front">
+        <div class="product-img" style="background-image: url('../assets/img/painel.webp');"></div>
+        <div class="product-info">
+          <h3>Painel Elétrico</h3>
+          <p class="description">Elemento de controle e segurança elétrica.</p>
+          <p class="details-btn">Detalhes</p>
+          <a href="#contato" class="btn">Solicitar</a>
+        </div>
+      </div>
+      <div class="product-card back">
+        <div class="product-info back-info">
+          <h3>Painel Elétrico</h3>
+          <p class="description-full">
+            Montado conforme <strong>normas NR-10 e IEC</strong>, integra <strong>sistemas de comando e proteção</strong>, podendo incluir <strong>relés</strong>, <strong>disjuntores</strong> e <strong>CLPs</strong>. Layout projetado para <strong>segurança</strong> e <strong>fácil manutenção</strong>.
+          </p>
+          <p class="back-btn">Voltar</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 5: Sensores -->
+    <div class="product-card-wrapper" data-flip>
+      <div class="product-card front">
+        <div class="product-img" style="background-image: url('../assets/img/sensores.webp');"></div>
+        <div class="product-info">
+          <h3>Sensores</h3>
+          <p class="description">Dispositivos de monitoramento e controle.</p>
+          <p class="details-btn">Detalhes</p>
+          <a href="#contato" class="btn">Solicitar</a>
+        </div>
+      </div>
+      <div class="product-card back">
+        <div class="product-info back-info">
+          <h3>Sensores</h3>
+          <p class="description-full">
+            Detectam <strong>posição</strong>, <strong>rotação</strong> ou <strong>vibração</strong>, garantindo <strong>controle operacional</strong> e <strong>segurança</strong> em processos automatizados.
+          </p>
+          <p class="back-btn">Voltar</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 6: Chave de Segurança -->
+    <div class="product-card-wrapper" data-flip>
+      <div class="product-card front">
+        <div class="product-img" style="background-image: url('../assets/img/chave.webp');"></div>
+        <div class="product-info">
+          <h3>Chave de Segurança Eletromagnética</h3>
+          <p class="description">Dispositivo que garante proteção durante operações de manutenção.</p>
+          <p class="details-btn">Detalhes</p>
+          <a href="#contato" class="btn">Solicitar</a>
+        </div>
+      </div>
+      <div class="product-card back">
+        <div class="product-info back-info">
+          <h3>Chave de Segurança Eletromagnética</h3>
+          <p class="description-full">
+            Utilizada para <strong>bloquear o funcionamento de máquinas</strong> quando <strong>portas ou tampas</strong> estão abertas. Atende às <strong>normas NR-12</strong> e <strong>ISO 14119</strong>.
+          </p>
+          <p class="back-btn">Voltar</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- === 8 CARDS ESCONDIDOS (hidden-card) === -->
+    <!-- CARD 7: Cabine Acústica -->
+    <div class="product-card-wrapper hidden-card" data-flip>
+      <div class="product-card front">
+        <div class="product-img" style="background-image: url('../assets/img/cabine.webp');"></div>
+        <div class="product-info">
+          <h3>Cabine de Isolamento Acústico</h3>
+          <p class="description">Estrutura voltada à redução de ruído industrial.</p>
+          <p class="details-btn">Detalhes</p>
+          <a href="#contato" class="btn">Solicitar</a>
+        </div>
+      </div>
+      <div class="product-card back">
+        <div class="product-info back-info">
+          <h3>Cabine de Isolamento Acústico</h3>
+          <p class="description-full">
+            Construída com <strong>painéis metálicos</strong> e <strong>material fonoabsorvente</strong>, garante <strong>conforto acústico</strong> e conformidade com a <strong>NR-15</strong>.
+          </p>
+          <p class="back-btn">Voltar</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 8: Polias -->
+    <div class="product-card-wrapper hidden-card" data-flip>
+      <div class="product-card front">
+        <div class="product-img" style="background-image: url('../assets/img/polias.webp');"></div>
+        <div class="product-info">
+          <h3>Polias</h3>
+          <p class="description">Peças que transmitem movimento e força entre eixos.</p>
+          <p class="details-btn">Detalhes</p>
+          <a href="#contato" class="btn">Solicitar</a>
+        </div>
+      </div>
+      <div class="product-card back">
+        <div class="product-info back-info">
+          <h3>Polias</h3>
+          <p class="description-full">
+            Produzidas em <strong>ferro fundido</strong>, <strong>aço</strong> ou <strong>alumínio</strong>, são <strong>balanceadas dinamicamente</strong> para melhor desempenho.
+          </p>
+          <p class="back-btn">Voltar</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 9: Correias -->
+    <div class="product-card-wrapper hidden-card" data-flip>
+      <div class="product-card front">
+        <div class="product-img" style="background-image: url('../assets/img/correias.webp');"></div>
+        <div class="product-info">
+          <h3>Correias</h3>
+          <p class="description">Elementos de transmissão mecânica flexíveis.</p>
+          <p class="details-btn">Detalhes</p>
+          <a href="#contato" class="btn">Solicitar</a>
+        </div>
+      </div>
+      <div class="product-card back">
+        <div class="product-info back-info">
+          <h3>Correias</h3>
+          <p class="description-full">
+            Podem ser <strong>em V</strong>, <strong>planas</strong> ou <strong>sincronizadoras</strong>, com <strong>alta resistência à tração</strong> e <strong>desgaste</strong>. Proporcionam <strong>desempenho contínuo</strong> e <strong>silencioso</strong>.
+          </p>
+          <p class="back-btn">Voltar</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 10: Rolamentos -->
+    <div class="product-card-wrapper hidden-card" data-flip>
+      <div class="product-card front">
+        <div class="product-img" style="background-image: url('../assets/img/rolamentos.webp');"></div>
+        <div class="product-info">
+          <h3>Rolamentos</h3>
+          <p class="description">Componentes que reduzem atrito e aumentam a durabilidade.</p>
+          <p class="details-btn">Detalhes</p>
+          <a href="#contato" class="btn">Solicitar</a>
+        </div>
+      </div>
+      <div class="product-card back">
+        <div class="product-info back-info">
+          <h3>Rolamentos</h3>
+          <p class="description-full">
+            Fornecidos conforme <strong>normas ISO</strong> e <strong>ABNT</strong>, garantem <strong>apoio rotativo</strong> eficiente e <strong>maior vida útil</strong> a eixos e engrenagens.
+          </p>
+          <p class="back-btn">Voltar</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 11: Separador de Pó -->
+    <div class="product-card-wrapper hidden-card" data-flip>
+      <div class="product-card front">
+        <div class="product-img" style="background-image: url('../assets/img/separador.webp');"></div>
+        <div class="product-info">
+          <h3>Separador de Pó</h3>
+          <p class="description">Equipamento que remove partículas sólidas do ar.</p>
+          <p class="details-btn">Detalhes</p>
+          <a href="#contato" class="btn">Solicitar</a>
+        </div>
+      </div>
+      <div class="product-card back">
+        <div class="product-info back-info">
+          <h3>Separador de Pó</h3>
+          <p class="description-full">
+            Funciona como <strong>sistema de filtragem ou ciclone</strong>, aumentando a <strong>eficiência do processo</strong> e a <strong>segurança ambiental</strong>.
+          </p>
+          <p class="back-btn">Voltar</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 12: Filtros -->
+    <div class="product-card-wrapper hidden-card" data-flip>
+      <div class="product-card front">
+        <div class="product-img" style="background-image: url('../assets/img/filtros.webp');"></div>
+        <div class="product-info">
+          <h3>Filtros</h3>
+          <p class="description">Essenciais para purificação e retenção de partículas.</p>
+          <p class="details-btn">Detalhes</p>
+          <a href="#contato" class="btn">Solicitar</a>
+        </div>
+      </div>
+      <div class="product-card back">
+        <div class="product-info back-info">
+          <h3>Filtros</h3>
+          <p class="description-full">
+            Projetados para <strong>partículas sólidas</strong>, <strong>líquidos</strong> ou <strong>gases</strong>, disponíveis em <strong>diversas malhas e materiais</strong> conforme a aplicação industrial.
+          </p>
+          <p class="back-btn">Voltar</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 13: Reformas em Geral -->
+    <div class="product-card-wrapper hidden-card" data-flip>
+      <div class="product-card front">
+        <div class="product-img" style="background-image: url('../assets/img/reformas.webp');"></div>
+        <div class="product-info">
+          <h3>Reformas em Geral</h3>
+          <p class="description">Serviço de recuperação e renovação de equipamentos.</p>
+          <p class="details-btn">Detalhes</p>
+          <a href="#contato" class="btn">Solicitar</a>
+        </div>
+      </div>
+      <div class="product-card back">
+        <div class="product-info back-info">
+          <h3>Reformas em Geral</h3>
+          <p class="description-full">
+            Inclui <strong>recondicionamento completo</strong> de <strong>moinhos</strong>, <strong>trituradores</strong> e componentes, com <strong>substituição de peças</strong>, <strong>recuperação estrutural</strong> e <strong>calibração técnica</strong>.
+          </p>
+          <p class="back-btn">Voltar</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 14: Assistência Técnica -->
+    <div class="product-card-wrapper hidden-card" data-flip>
+      <div class="product-card front">
+        <div class="product-img" style="background-image: url('../assets/img/assistencia.webp');"></div>
+        <div class="product-info">
+          <h3>Assistência Técnica Especializada</h3>
+          <p class="description">Atendimento técnico completo para manutenção industrial.</p>
+          <p class="details-btn">Detalhes</p>
+          <a href="#contato" class="btn">Solicitar</a>
+        </div>
+      </div>
+      <div class="product-card back">
+        <div class="product-info back-info">
+          <h3>Assistência Técnica Especializada</h3>
+          <p class="description-full">
+            Oferece <strong>diagnóstico</strong>, <strong>manutenção preventiva e corretiva</strong>, emissão de <strong>relatórios técnicos</strong> e conformidade com <strong>normas vigentes</strong>.
+          </p>
+          <p class="back-btn">Voltar</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- BOTÃO "VEJA MAIS" -->
+  <div class="load-more-container">
+    <button id="loadMoreBtn" class="btn load-more-btn">Veja mais</button>
+  </div>
+</section>
+
+ <!-- Sobre -->
+<section id="sobre">
+  <div class="about-container">
+    <div class="about-text">
+      <h2>Quem Somos</h2>
+      <h3>Especialistas em Moinhos e Trituradores</h3>
+      <p class="highlight">
+        A <strong>AfiaCorte</strong> é referência em <strong>afiação de precisão</strong>, <strong>reformas completas</strong> e <strong>manutenção preventiva</strong> de equipamentos industriais.
+      </p>
+
+      <!-- SERVIÇOS EM ÍCONES -->
+      <div class="services-grid">
+        <div class="service-item">
+          <span class="icon">Knife</span>
+          <span>Afiação de Facas</span>
+        </div>
+        <div class="service-item">
+          <span class="icon">Wrench</span>
+          <span>Reformas em Geral</span>
+        </div>
+        <div class="service-item">
+          <span class="icon">Tools</span>
+          <span>Assistência Técnica</span>
+        </div>
+        <div class="service-item">
+          <span class="icon">Gear</span>
+          <span>Componentes Industriais</span>
+        </div>
+      </div>
+
+      <!-- MARCAS -->
+      <p class="brands-title">Marcas que confiam em nós:</p>
+      <div class="brands-logos">
+        <span>Mecano</span>
+        <span>Kief</span>
+        <span>Tria</span>
+        <span>Seibt</span>
+        <span>Rome</span>
+        <span>Rapid</span>
+      </div>
+
+      <a href="#contato" class="btn about-btn">Fale com um especialista</a>
+    </div>
+
+    <div class="about-visual">
       <div class="about-img"></div>
+      <div class="about-overlay">
+        <p class="stat">+15 anos</p>
+        <p class="stat-label">de experiência</p>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- Contato -->
-  <section id="contato" style="background: #f1f5f9;">
-    <h2>Fale Conosco</h2>
-    <div style="text-align: center; margin-bottom: 2rem;">
-      <p><strong>(11) 2222-3613 | (11) 93363-3213</strong></p>
-      <p>Via Francisco Botti, nº 530 - Pinhal, Cabreuva - SP, 13317-286</p>
+  <section id="contato">
+  <h2>Fale Conosco</h2>
+
+  <div class="contact-grid">
+    
+    <!-- FORMULÁRIO -->
+    <form action="https://SEU_DOMINIO.com/cgi-sys/formmail.pl" method="POST" class="contact-form">
+      <input type="hidden" name="recipient" value="seu@email.com">
+      <input type="hidden" name="subject" value="Nova mensagem do site AfiaCorte">
+      <input type="hidden" name="redirect" value="https://SEU_DOMINIO.com/obrigado.html">
+
+      <div class="form-group">
+        <label for="nome">Nome *</label>
+        <input type="text" id="nome" name="nome" required placeholder="Seu nome completo">
+      </div>
+
+      <div class="form-group">
+        <label for="telefone">Telefone *</label>
+        <input type="tel" id="telefone" name="telefone" required placeholder="(11) 93363-3213">
+      </div>
+
+      <div class="form-group">
+        <label for="email">E-mail *</label>
+        <input type="email" id="email" name="email" required placeholder="seu@email.com">
+      </div>
+
+      <div class="form-group">
+        <label for="mensagem">Mensagem *</label>
+        <textarea id="mensagem" name="mensagem" rows="5" required placeholder="Descreva seu projeto..."></textarea>
+      </div>
+
+      <button type="submit" class="btn">Enviar Mensagem</button>
+    </form>
+
+    <!-- MAPA -->
+    <div class="map-container">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3660.352876891234!2d-47.12345678901234!3d-23.34567890123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf4a8b8c8d8e8f%3A0x9a9b9c9d9e9f9a9b!2sVia%20Francisco%20Botti%2C%20530%20-%20Pinhal%2C%20Cabre%C3%BAva%20-%20SP%2C%2013317-286!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" 
+        width="100%" 
+        height="100%" 
+        style="border:0; border-radius: 16px;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
     </div>
-    <div class="contact-form">
-      <form>
-        <div class="form-group">
-          <label>Nome</label>
-          <input type="text" required />
-        </div>
-        <div class="form-group">
-          <label>Telefone</label>
-          <input type="tel" required />
-        </div>
-        <div class="form-group">
-          <label>E-mail</label>
-          <input type="email" required />
-        </div>
-        <div class="form-group">
-          <label>Mensagem</label>
-          <textarea rows="4" required></textarea>
-        </div>
-        <button type="submit" class="btn" style="width: 100%;">Enviar Mensagem</button>
-      </form>
-    </div>
-  </section>
+
+  </div>
+
+  <!-- BOTÃO ABAIXO DO MAPA (OPCIONAL) -->
+  <div style="text-align: center; margin-top: 1.5rem;">
+    <a href="https://maps.app.goo.gl/9vPqX8kL3mN2vJqY7" target="_blank" class="btn">
+      Abrir no Google Maps
+    </a>
+  </div>
+</section>
 
   <!-- WhatsApp Flutuante com ÍCONE -->
-  <a href="https://wa.me/551199999999?text=Olá, vim pelo site da AfiaCorte!" class="whatsapp-float" target="_blank">
-    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNiIgaGVpZ2h0PSIzNiIgdmlld0JveD0iMCAwIDM2IDM2Ij4NCiAgPGNpcmNsZSBjeD0iMTgiIGN5PSIxOCIgcj0iMTgiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwQTY1MSIgc3Ryb2tlLXdpZHRoPSIzIi8+DQogIDxwYXRoIGQ9Ik0xOCAyLjVsLTQgNC41IDQuNSA0LjV6IiBmaWxsPSIjMDAwMDAwIi8+DQogIDxwYXRoIGQ9Ik0xOCAyOS41bC00LTQuNSA0LjUtNC41eiIgZmlsbD0iIzAwQTY1MSIvPg0KICA8cGF0aCBkPSJNMjkuNSAxOGwtNC41LTQgNC41LTQuNXoiIGZpbGw9IiMwMEE2NTEiLz4NCjwvc3ZnPg==" alt="AfiaCorte Ícone">
+  <a href="https://wa.me/5511933633213?text=Ol%C3%A1%21%20Gostaria%20de%20um%20or%C3%A7amento." class="whatsapp-float" target="_blank">
+    <img src="../assets/img/whatsapp-icon.png" alt="AfiaCorte whatsappp-Ícone">
   </a>
 
   <!-- Rodapé -->
