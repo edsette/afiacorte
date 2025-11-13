@@ -227,7 +227,7 @@ input, textarea {
 /* WhatsApp Flutuante com ÍCONE */
 .whatsapp-float {
   position: fixed;
-  bottom: 20px;
+  bottom: 95px;
   right: 20px;
   background: white;
   width: 60px;
