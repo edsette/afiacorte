@@ -192,7 +192,7 @@ h2 {
   background: #cbd5e1;
   height: 300px;
   border-radius: 12px;
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><rect fill="%23e2e8f0" width="400" height="300"/><text x="50%" y="50%" font-family="Arial" font-size="24" fill="%2394a3b8" text-anchor="middle" dominant-baseline="middle">Equipe AfiaCorte</text></svg>');
+  background-image: url('../assets/img/aboutme.jpeg');
   background-size: cover;
 }
 
@@ -603,7 +603,7 @@ footer {
 .about-img {
   height: 500px;
   background: #cbd5e1;
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500"><rect fill="%23e5e7eb" width="600" height="500"/><text x="50%" y="50%" font-family="Arial" font-size="32" fill="%239ca3af" text-anchor="middle" dominant-baseline="middle">Fachada AfiaCorte</text></svg>');
+  background-image: url('../assets/img/aboutme.jpeg');
   background-size: cover;
   background-position: center;
 }
@@ -670,5 +670,74 @@ footer {
 
   .stat {
     font-size: 1.6rem;
+  }
+}
+
+/* ÍCONE HAMBURGUER BONITO */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1001;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background: var(--dark);
+  margin: 5px 0;
+  transition: 0.3s;
+  border-radius: 2px;
+}
+
+/* Animação do X quando aberto */
+.nav-links.active + .menu-toggle span:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+.nav-links.active + .menu-toggle span:nth-child(2) {
+  opacity: 0;
+}
+.nav-links.active + .menu-toggle span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    flex-direction: column;
+    padding: 1rem 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transform: translateY(-20px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .nav-links.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-links a {
+    padding: 0.8rem 2rem;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+  }
+
+  .nav-links a:last-child {
+    border-bottom: none;
   }
 }

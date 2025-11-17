@@ -12,20 +12,28 @@
 <body>
 
   <!-- Cabeçalho com LOGO COMPLETO -->
-  <header>
-    <nav>
-      <a href="#home">
-        <img src="./assets/img/logo1.png" alt="AfiaCorte Logo" class="logo-img">
-      </a>
-      <div class="nav-links" id="navLinks">
-        <a href="#home">Home</a>
-        <a href="#servicos">Serviços</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#contato">Contato</a>
-      </div>
-      <button class="menu-toggle" id="menuToggle">Menu</button>
-    </nav>
-  </header>
+<header>
+  <nav>
+    <a href="#home">
+      <img src="./assets/img/logo1.png" alt="AfiaCorte Logo" class="logo-img">
+    </a>
+
+    <!-- MENU -->
+    <div class="nav-links" id="navLinks">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#servicos" class="nav-link">Serviços</a>
+      <a href="#sobre" class="nav-link">Sobre</a>
+      <a href="#contato" class="nav-link">Contato</a>
+    </div>
+
+    <!-- BOTÃO HAMBURGUER -->
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+</header>
 
   <!-- Hero -->
   <section class="hero" id="home">
@@ -64,7 +72,7 @@
     <!-- CARD 1: Afiação de Facas -->
     <div class="product-card-wrapper" data-flip>
       <div class="product-card front">
-        <div class="product-img" style="background-image: url('./assets/img/afiafacasjpg.webp');"></div>
+        <div class="product-img" style="background-image: url('./assets/img/Afiação-de-Facas-Industriais.jpeg');"></div>
         <div class="product-info">
           <h3>Afiação de Facas Industriais</h3>
           <p class="description">Serviço essencial para manter a eficiência de corte.</p>
@@ -86,7 +94,7 @@
     <!-- CARD 2: Grelhas -->
     <div class="product-card-wrapper" data-flip>
       <div class="product-card front">
-        <div class="product-img" style="background-image: url('./assets/img/grelhas.webp');"></div>
+        <div class="product-img" style="background-image: url('./assets/img/Grelhas.jpeg');"></div>
         <div class="product-info">
           <h3>Grelhas</h3>
           <p class="description">Componentes usados para controle do tamanho do material processado.</p>
@@ -108,7 +116,7 @@
     <!-- CARD 3: Cortinas -->
     <div class="product-card-wrapper" data-flip>
       <div class="product-card front">
-        <div class="product-img" style="background-image: url('./assets/img/cortinas.webp');"></div>
+        <div class="product-img" style="background-image: url('./assets/img/Cortinas.jpeg');"></div>
         <div class="product-info">
           <h3>Cortinas</h3>
           <p class="description">Utilizadas para segurança e redução de ruído.</p>
@@ -130,7 +138,7 @@
     <!-- CARD 4: Painel Elétrico -->
     <div class="product-card-wrapper" data-flip>
       <div class="product-card front">
-        <div class="product-img" style="background-image: url('./assets/img/painel.webp');"></div>
+        <div class="product-img" style="background-image: url('./assets/img/Painel-Elétrico.jpeg');"></div>
         <div class="product-info">
           <h3>Painel Elétrico</h3>
           <p class="description">Elemento de controle e segurança elétrica.</p>
@@ -152,7 +160,7 @@
     <!-- CARD 5: Sensores -->
     <div class="product-card-wrapper" data-flip>
       <div class="product-card front">
-        <div class="product-img" style="background-image: url('./assets/img/sensores.webp');"></div>
+        <div class="product-img" style="background-image: url('./assets/img/Sensores.jpeg');"></div>
         <div class="product-info">
           <h3>Sensores</h3>
           <p class="description">Dispositivos de monitoramento e controle.</p>
@@ -174,7 +182,7 @@
     <!-- CARD 6: Chave de Segurança -->
     <div class="product-card-wrapper" data-flip>
       <div class="product-card front">
-        <div class="product-img" style="background-image: url('./assets/img/chave.webp');"></div>
+        <div class="product-img" style="background-image: url('./assets/img/Chave-de-Segurança-Eletromagnética.jpeg');"></div>
         <div class="product-info">
           <h3>Chave de Segurança Eletromagnética</h3>
           <p class="description">Dispositivo que garante proteção durante operações de manutenção.</p>
@@ -197,7 +205,7 @@
     <!-- CARD 7: Cabine Acústica -->
     <div class="product-card-wrapper hidden-card" data-flip>
       <div class="product-card front">
-        <div class="product-img" style="background-image: url('./assets/img/cabine.webp');"></div>
+        <div class="product-img" style="background-image: url('./assets/img/Cabine-de-Isolamento-Acústico.jpeg');"></div>
         <div class="product-info">
           <h3>Cabine de Isolamento Acústico</h3>
           <p class="description">Estrutura voltada à redução de ruído industrial.</p>
@@ -219,7 +227,7 @@
     <!-- CARD 8: Polias -->
     <div class="product-card-wrapper hidden-card" data-flip>
       <div class="product-card front">
-        <div class="product-img" style="background-image: url('./assets/img/polias.webp');"></div>
+        <div class="product-img" style="background-image: url('./assets/img/Polias.jpeg');"></div>
         <div class="product-info">
           <h3>Polias</h3>
           <p class="description">Peças que transmitem movimento e força entre eixos.</p>
@@ -241,7 +249,7 @@
     <!-- CARD 9: Correias -->
     <div class="product-card-wrapper hidden-card" data-flip>
       <div class="product-card front">
-        <div class="product-img" style="background-image: url('./assets/img/correias.webp');"></div>
+        <div class="product-img" style="background-image: url('./assets/img/Correias.jpeg');"></div>
         <div class="product-info">
           <h3>Correias</h3>
           <p class="description">Elementos de transmissão mecânica flexíveis.</p>
@@ -263,7 +271,7 @@
     <!-- CARD 10: Rolamentos -->
     <div class="product-card-wrapper hidden-card" data-flip>
       <div class="product-card front">
-        <div class="product-img" style="background-image: url('./assets/img/rolamentos.webp');"></div>
+        <div class="product-img" style="background-image: url('./assets/img/Rolamentos.jpeg');"></div>
         <div class="product-info">
           <h3>Rolamentos</h3>
           <p class="description">Componentes que reduzem atrito e aumentam a durabilidade.</p>
@@ -285,7 +293,7 @@
     <!-- CARD 11: Separador de Pó -->
     <div class="product-card-wrapper hidden-card" data-flip>
       <div class="product-card front">
-        <div class="product-img" style="background-image: url('./assets/img/separador.webp');"></div>
+        <div class="product-img" style="background-image: url('./assets/img/Separador-de-Pó.jpeg');"></div>
         <div class="product-info">
           <h3>Separador de Pó</h3>
           <p class="description">Equipamento que remove partículas sólidas do ar.</p>
@@ -307,7 +315,7 @@
     <!-- CARD 12: Filtros -->
     <div class="product-card-wrapper hidden-card" data-flip>
       <div class="product-card front">
-        <div class="product-img" style="background-image: url('./assets/img/filtros.webp');"></div>
+        <div class="product-img" style="background-image: url('./assets/img/Filtros.jpeg');"></div>
         <div class="product-info">
           <h3>Filtros</h3>
           <p class="description">Essenciais para purificação e retenção de partículas.</p>
@@ -329,7 +337,7 @@
     <!-- CARD 13: Reformas em Geral -->
     <div class="product-card-wrapper hidden-card" data-flip>
       <div class="product-card front">
-        <div class="product-img" style="background-image: url('./assets/img/reformas.webp');"></div>
+        <div class="product-img" style="background-image: url('./assets/img/Reformas-em-Geral.jpeg');"></div>
         <div class="product-info">
           <h3>Reformas em Geral</h3>
           <p class="description">Serviço de recuperação e renovação de equipamentos.</p>
@@ -351,7 +359,7 @@
     <!-- CARD 14: Assistência Técnica -->
     <div class="product-card-wrapper hidden-card" data-flip>
       <div class="product-card front">
-        <div class="product-img" style="background-image: url('./assets/img/assistencia.webp');"></div>
+        <div class="product-img" style="background-image: url('./assets/img/Assistência-Técnica-Especializada.jpeg');"></div>
         <div class="product-info">
           <h3>Assistência Técnica Especializada</h3>
           <p class="description">Atendimento técnico completo para manutenção industrial.</p>

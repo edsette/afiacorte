@@ -1,8 +1,20 @@
-// Seu código (mantido)
-document.getElementById('menuToggle').addEventListener('click', () => {
-  document.getElementById('navLinks').classList.toggle('active');
+// MENU MOBILE - ABRIR/FECHAR + FECHAR AO CLICAR EM LINK
+const menuToggle = document.getElementById('menuToggle');
+const navLinks = document.getElementById('navLinks');
+
+// Abrir/fechar ao clicar no botão
+menuToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
 });
 
+// FECHAR AUTOMATICAMENTE AO CLICAR EM QUALQUER LINK
+document.querySelectorAll('.nav-link').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('active');
+  });
+});
+
+// ANIMAÇÃO DOS CARDS E BENEFÍCIOS AO ROLAR
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -14,6 +26,8 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.benefit-card, .product-card-wrapper').forEach(card => {
   observer.observe(card);
 });
+
+
 
 // NOVO: Flip com clique
 document.querySelectorAll('[data-flip]').forEach(wrapper => {
