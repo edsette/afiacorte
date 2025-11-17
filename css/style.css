@@ -192,7 +192,7 @@ h2 {
   background: #cbd5e1;
   height: 300px;
   border-radius: 12px;
-  background-image: url('../assets/img/aboutme.jpeg');
+  background-image: url('/assets/img/aboutme.jpeg');
   background-size: cover;
 }
 
@@ -603,7 +603,7 @@ footer {
 .about-img {
   height: 500px;
   background: #cbd5e1;
-  background-image: url('../assets/img/aboutme.jpeg');
+  background-image: url('/assets/img/aboutme.jpeg');
   background-size: cover;
   background-position: center;
 }
