@@ -69,7 +69,7 @@ nav {
   background-size: cover;
   color: white;
   text-align: center;
-  padding: 4rem 1rem;
+  padding: 6rem 1rem;
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 }
 
