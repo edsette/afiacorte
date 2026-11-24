@@ -1,0 +1,10 @@
+/* TEAM */
+Design e desenvolvimento: Eduardo Sette
+Site: https://edsette.github.io/edusettewebdev/
+GitHub: https://github.com/edsette
+Local: Brasil
+
+/* SITE */
+Cliente: AfiaCorte
+Padrões: HTML5, CSS3, JavaScript
+Idioma: Português (Brasil)
