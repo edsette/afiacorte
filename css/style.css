@@ -101,8 +101,6 @@ h2 {
 .btn-primary { background: var(--primary); color: var(--dark); }
 .btn-primary:hover { background: #a6cc1a; }
 
-.btn-ghost { background: transparent; color: #fff; border-color: rgba(255, 255, 255, 0.85); }
-.btn-ghost:hover { background: rgba(255, 255, 255, 0.12); }
 
 /* ---------- Cabeçalho ---------- */
 .site-header {
@@ -205,16 +203,14 @@ nav {
 .hero-text {
   font-size: clamp(1.05rem, 2.2vw, 1.2rem);
   max-width: 600px;
-  margin: 0 auto 2rem;
+  margin: 0 auto;
   color: rgba(255, 255, 255, 0.92);
 }
 
-.hero-actions { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
 
 .hero-content > * { animation: fadeUp 0.8s both; }
 .hero-content > :nth-child(2) { animation-delay: 0.1s; }
 .hero-content > :nth-child(3) { animation-delay: 0.25s; }
-.hero-content > :nth-child(4) { animation-delay: 0.4s; }
 
 /* ---------- Revelar ao rolar ---------- */
 .js .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.5s ease, transform 0.5s ease; }
@@ -298,40 +294,38 @@ nav {
 .product-info .description { color: var(--muted); }
 
 .back-info { gap: 1rem; }
+.back-info h3 { padding-right: 2.5rem; }
 .description-full { font-size: 0.95rem; line-height: 1.6; }
 
-.details-btn,
-.back-btn,
-.quote-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 44px;
-  padding: 0.6rem 1.4rem;
-  border-radius: 50px;
-  border: 2px solid transparent;
-  font: inherit;
-  font-weight: 600;
-  text-decoration: none;
-  cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-.details-btn:hover,
-.back-btn:hover,
-.quote-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 16px rgba(0, 0, 0, 0.18); }
+/* Card inteiro é clicável; um ícone discreto indica que ele vira */
+.product-card-wrapper { cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.product-card-wrapper:focus-visible { outline: 3px solid var(--primary-dark); outline-offset: 4px; border-radius: var(--radius); }
 
-.details-btn {
-  margin-top: auto;
-  align-self: flex-start;
-  background: transparent;
+/* Ao passar o mouse, o card "ensaia" o giro */
+@media (hover: hover) {
+  .product-card-wrapper:not(.flipped):hover .front { transform: rotateY(-8deg); box-shadow: var(--shadow-md); }
+  .product-card-wrapper.flipped:hover .back { transform: rotateY(8deg); }
+}
+
+.flip-hint {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  z-index: 1;
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
   color: var(--primary-dark);
-  border-color: var(--primary);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  pointer-events: none;
+  transition: transform 0.4s ease;
 }
-
-.back-actions { margin-top: auto; display: flex; flex-wrap: wrap; gap: 0.75rem; }
-.quote-btn { background: #fff; color: var(--dark); }
-.back-btn { background: transparent; color: #fff; border-color: rgba(255, 255, 255, 0.8); }
-.back :focus-visible { outline-color: #fff; }
+.flip-hint svg { width: 18px; height: 18px; }
+.back .flip-hint { background: rgba(255, 255, 255, 0.18); color: #fff; box-shadow: none; }
+.product-card-wrapper:hover .flip-hint { transform: rotate(-180deg); }
 
 .hidden-card { display: none; }
 .hidden-card.show { display: block; }
@@ -378,7 +372,6 @@ nav {
   font-weight: 500;
 }
 
-.about-btn { align-self: flex-start; }
 
 .about-visual {
   position: relative;
@@ -470,6 +463,9 @@ textarea:focus {
 .form-status.ok { color: var(--success); background: #f1f8e0; padding: 0.8rem 1rem; border-radius: 10px; }
 .form-status.erro { color: var(--danger); background: #fdecea; padding: 0.8rem 1rem; border-radius: 10px; }
 .form-status a { color: inherit; font-weight: 700; }
+
+.form-alt { margin-top: 1rem; text-align: center; font-size: 0.9rem; color: var(--muted); }
+.form-alt a { color: var(--primary-dark); font-weight: 600; }
 
 .contact-side { display: flex; flex-direction: column; gap: 1.5rem; }
 
@@ -567,7 +563,6 @@ textarea:focus {
   .about-img { height: 360px; }
   .services-grid { text-align: left; }
   .brands-logos { justify-content: center; }
-  .about-btn { align-self: center; }
 }
 
 @media (max-width: 768px) {
@@ -620,7 +615,6 @@ textarea:focus {
 @media (max-width: 576px) {
   .section { padding: 3.5rem 1rem; }
   .contact-form { padding: 1.5rem 1.25rem; }
-  .hero-actions .btn { width: 100%; }
   .services-grid { grid-template-columns: 1fr; }
   .about-img { height: 280px; }
   .about-overlay { left: 1rem; bottom: 1rem; padding: 0.7rem 1.1rem; }

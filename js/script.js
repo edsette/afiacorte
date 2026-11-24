@@ -12,7 +12,7 @@
      depois de ativar, troque o e-mail pelo código que ele fornece. */
 const CONFIG = {
   whatsapp: '5511933633213',
-  formEndpoint: '',
+  formEndpoint: 'https://formsubmit.co/ajax/contato@afiacorte.com.br',
 };
 
 /* ---------- Menu mobile ---------- */
@@ -46,27 +46,32 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
 
-/* ---------- Cards que viram ---------- */
+/* ---------- Cards que viram (clique/toque no card inteiro) ---------- */
+const FLIP_ICON = '<span class="flip-hint" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 15.5-6.2L21 8M21 3v5h-5M21 12a9 9 0 0 1-15.5 6.2L3 16M3 21v-5h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>';
+
 document.querySelectorAll('[data-flip]').forEach((wrapper) => {
   const front = wrapper.querySelector('.front');
   const back = wrapper.querySelector('.back');
-  const title = front.querySelector('h3')?.textContent.trim() ?? '';
 
-  // Só o lado visível do card recebe foco do teclado
-  back.inert = true;
+  front.insertAdjacentHTML('afterbegin', FLIP_ICON);
+  back.insertAdjacentHTML('afterbegin', FLIP_ICON);
 
-  function flip(toBack) {
+  function flip() {
+    const toBack = !wrapper.classList.contains('flipped');
     wrapper.classList.toggle('flipped', toBack);
-    front.inert = toBack;
-    back.inert = !toBack;
-    (toBack ? back.querySelector('.back-btn') : front.querySelector('.details-btn'))?.focus({ preventScroll: true });
+    wrapper.setAttribute('aria-expanded', String(toBack));
+    front.setAttribute('aria-hidden', String(toBack));
+    back.setAttribute('aria-hidden', String(!toBack));
   }
 
-  wrapper.querySelector('.details-btn')?.addEventListener('click', () => flip(true));
-  wrapper.querySelector('.back-btn')?.addEventListener('click', () => flip(false));
-
-  // "Pedir orçamento" já escolhe o serviço no formulário
-  wrapper.querySelector('.quote-btn')?.addEventListener('click', () => selectService(title));
+  back.setAttribute('aria-hidden', 'true');
+  wrapper.addEventListener('click', flip);
+  wrapper.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      flip();
+    }
+  });
 });
 
 /* ---------- Ver todos os serviços ---------- */
@@ -77,19 +82,13 @@ loadMoreBtn?.addEventListener('click', () => {
   hiddenCards.forEach((card) => card.classList.add('show'));
   loadMoreBtn.setAttribute('aria-expanded', 'true');
   loadMoreBtn.parentElement.hidden = true;
-  hiddenCards[0]?.querySelector('.details-btn')?.focus({ preventScroll: true });
+  hiddenCards[0]?.focus({ preventScroll: true });
 });
 
 /* ---------- Formulário ---------- */
 const form = document.getElementById('contactForm');
 const statusEl = document.getElementById('formStatus');
 const submitBtn = document.getElementById('submitBtn');
-const serviceSelect = document.getElementById('servico');
-
-function selectService(name) {
-  const option = [...serviceSelect.options].find((o) => o.text === name);
-  if (option) serviceSelect.value = option.value || option.text;
-}
 
 // Máscara de telefone: (11) 93363-3213 / (11) 3333-4444
 const phoneInput = document.getElementById('telefone');
